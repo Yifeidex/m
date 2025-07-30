@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>M2M Capital</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/phone.css">
+</head>
+
+<body>
+  <div class="first" id="first">
+    <img class="logo" src="./imgs/phone_logo1.png" alt="">
+    <img class="text1" src="./imgs/phone_text1.png" alt="">
+    <div class="btn1">Contact us</div>
+  </div>
+
+  <div class="second">
+    <img class="text2" src="./imgs/phone_text2.png" alt="">
+  </div>
+
+  <div class="third">
+    <div class="row1">
+      <div class="title_name">Portfolio</div>
+    </div>
+    <div class="row_content">
+
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item1.png" alt="">
+          <div class="name">ACM</div>
+          <div class="text">
+            A next-gen decentralized privacy protocol that enables cross-chain, untraceable, and enterprise-grade asset
+            transfers by combining ZKP
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item2.png" alt="">
+          <div class="name">Bullbit</div>
+          <div class="text">
+            Bullbit: Hyper AI DEX - the fastest on-chain AI derivatives platform: Create AI Agents, launch tokens, build
+            value, trade and exchange assets
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item12.png" alt="">
+          <div class="name">LOK Universe</div>
+          <div class="text">
+            Where NFTs unlock multi-genre games through true interoperability.| LOK | LOK Chronicle | LOK Hunters
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item8.png" alt="">
+          <div class="name">PANDA TITAN</div>
+          <div class="text">
+            Panda Titan - GameFi | Web3 communities | game engine development | game streaming platforms | Web3 public
+            chains
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item10.png" alt="">
+          <div class="name">Nexgendex</div>
+          <div class="text">
+            Nexgen is a decentralized NFT perpetual contract exchange that improves traditional crypto's vamm and oracle
+            mechanisms...
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item4.png" alt="">
+          <div class="name">Nillion</div>
+          <div class="text">
+            Nillion enables the training and inference of AI models in a secure and confidential manner, creating the
+            backbone of secure personalized AI.
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item3.png" alt="">
+          <div class="name">FCM</div>
+          <div class="text">
+            Nillion enables the training and inference of AI models in a secure and confidential manner, creating the
+            backbone of secure personalized AI.
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item13.png" alt="">
+          <div class="name">PEAQ</div>
+          <div class="text">
+            Powering a human-centric Machine Economy
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item5.png" alt="">
+          <div class="name">Genpharma Chain</div>
+          <div class="text">
+            Revolutionising drug discovery with AI & Web3 for a transparent, secure, and collaborative pharmaceutical
+            process.
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="item_box">
+          <img src="./imgs/item9.png" alt="">
+          <div class="name">BG Game</div>
+          <div class="text">
+            Beyond Gaming (BG Chain): A decentralized gaming blockchain with low costs, high scalability, cross-game
+            assets, DAO governance, and AI-driven features.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    <div class="b_row">
+      <img class="b_logo" src="./imgs/logo2.png" alt="">
+      <div class="desc1">
+        Twitter：https://x.com/M2MCapital<br>
+        Email：invest@m2mcapital.space<br>
+        crunch base：https://<br>
+        www.crunchbase.com/organization/m2m-<br>capital</div>
+    </div>
+    <div class="b_row">
+      <div class="desc2">
+        our office<br><br>
+        ROOM 1605, HO KING<br>
+        COMMERCIAL CENTRE, 2-16 FA<br>
+        YUEN STREET,MONGKOK, KOWLOON, HONG KONG<br>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    (function () {
+      function isMobileDevice() {
+        // 方法1：userAgent检测
+        const ua = navigator.userAgent.toLowerCase();
+        const mobileKeywords = [
+          'android', 'iphone', 'ipad', 'ipod',
+          'windows phone', 'blackberry'
+        ];
+        const isUA = mobileKeywords.some(k => ua.includes(k));
+
+        // 方法2：屏幕尺寸检测
+        const isScreen = window.matchMedia('(max-width: 768px)').matches;
+
+        // 方法3：触摸事件检测
+        const isTouch = 'ontouchstart' in window;
+
+        return isUA || isScreen || isTouch;
+      }
+
+      if (!isMobileDevice()) {
+        window.location.href = './index.html'
+      }
+      const baseSize = 100 // 基准值100px=1rem(设计稿750px宽时)
+      function setRem() {
+        const scale = document.documentElement.clientWidth / 750
+        document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + 'px'
+        if (!isMobileDevice()) {
+          window.location.href = './index.html'
+        }
+      }
+      setRem()
+      window.addEventListener('resize', setRem)
+    })()
+  </script>
+</body>
+
+</html>
