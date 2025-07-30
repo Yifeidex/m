@@ -177,10 +177,35 @@
   </div>
 
   <script>
+    function isMobileDevice() {
+      // 方法1：userAgent检测
+      const ua = navigator.userAgent.toLowerCase();
+      const mobileKeywords = [
+        'android', 'iphone', 'ipad', 'ipod',
+        'windows phone', 'blackberry'
+      ];
+      const isUA = mobileKeywords.some(k => ua.includes(k));
+
+      // 方法2：屏幕尺寸检测
+      const isScreen = window.matchMedia('(max-width: 768px)').matches;
+
+      // 方法3：触摸事件检测
+      const isTouch = 'ontouchstart' in window;
+
+      return isUA || isScreen || isTouch;
+    }
+
+    if (isMobileDevice()) {
+      window.location.href = './phoneIndex.html'
+    }
+
     function setRem() {
       const scale = (document.documentElement.clientHeight + 1) / 1080
       document.documentElement.style.fontSize = (scale) * 100 + 'px'
       console.log(document.documentElement.style.fontSize)
+      if (isMobileDevice()) {
+        window.location.href = './phoneIndex.html'
+      }
     }
     setRem()
     window.onresize = function () {
@@ -224,6 +249,3 @@
 </body>
 
 </html>
-
-
-
